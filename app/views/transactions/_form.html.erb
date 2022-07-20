@@ -1,0 +1,39 @@
+<%= form_with model: transaction do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% transaction.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :value %><br>
+    <%= form.number_field :value, min: 0.1, step: 0.1 %><br>
+    <% transaction.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :type %><br>
+    <%= form.select :type, ['income', 'spending']%>
+  </div>
+
+  <div>
+    <%= form.label :date %><br>
+    <%= form.date_field :date %><br>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %><br>
+    <% transaction.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
