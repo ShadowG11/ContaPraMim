@@ -11,28 +11,10 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_07_20_190344) do
-  create_table "gains", force: :cascade do |t|
-    t.string "title"
-    t.decimal "value"
-    t.date "date"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spendings", force: :cascade do |t|
-    t.string "title"
-    t.decimal "value"
-    t.date "date"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "transactions", force: :cascade do |t|
     t.string "title"
     t.decimal "value"
-    t.string "type"
+    t.string "category"
     t.date "date"
     t.text "description"
     t.datetime "created_at", null: false
