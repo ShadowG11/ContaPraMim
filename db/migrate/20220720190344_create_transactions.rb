@@ -3,7 +3,7 @@ class CreateTransactions < ActiveRecord::Migration[7.0]
     create_table :transactions do |t|
       t.string :title
       t.decimal :value
-      t.string :type
+      t.string :category
       t.date :date
       t.text :description
 
