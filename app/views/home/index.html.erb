@@ -1,6 +1,9 @@
 <h1>Home#index</h1>
 
 <p>You have <%= Transaction.count %> transactions!</p>
+<p>Incomings: <%= @incomings %></p>
+<p>Spendings: <%= @spendings %></p>
+<p>Total: <%= @total_money %></p>
 
 <ul>
   <% @transactions.each do |transaction| %>
