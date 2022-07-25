@@ -26,7 +26,7 @@
 
   <div>
     <%= form.label :date %><br>
-    <%= form.date_field :date %><br>
+    <%= form.date_field :date, value: Date.today %><br>
     <% transaction.errors.full_messages_for(:date).each do |message| %>
       <div><%= message %></div>
     <% end %>
