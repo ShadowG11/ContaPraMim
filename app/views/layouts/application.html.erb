@@ -11,13 +11,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <header>
-    <%= link_to("Home", root_path) %>
-    <%= link_to("Sign in", "/sign_in") %>
-    <%= link_to("Sign up", "/users/new") %>
-  </header>
-
   <body>
+    <%= render 'layouts/header' %>
     <%= yield %>
   </body>
 </html>
